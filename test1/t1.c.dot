@@ -1,0 +1,65 @@
+digraph AST_graph {              
+    graph [                      
+        charset = "UTF-8",     
+        bgcolor = "#EDEDED",   
+        rankdir = TB,            
+        nodesep = 1.1,           
+        ranksep = 1.05,          
+    ];                           
+    node [                       
+        shape = record,          
+        // fontname = "Ricty", 
+        fontsize = 8,            
+    ];                           
+    // node
+    node0 [label = "{translation_unit|{<p0>0|<p1>1}}"]; 
+    node1 [label = "{translation_unit_element|{<p0>0|<p1>1}}"]; 
+    node2 [label = "{type_specifier|{<p0>0}}"]; 
+    node3 [label = "{TK_KW_INT|int}"]; 
+    node4 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node5 [label = "{TK_ID|printf}"]; 
+    node6 [label = "direct_declarator_parameter"]; 
+    node7 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node8 [label = "{type_specifier|{<p0>0}}"]; 
+    node9 [label = "{TK_KW_INT|int}"]; 
+    node10 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node11 [label = "{TK_ID|main}"]; 
+    node12 [label = "direct_declarator_parameter"]; 
+    node13 [label = "{compound_statement|{<p0>0}}"]; 
+    node14 [label = "{statement_exp|{<p0>0}}"]; 
+    node15 [label = "{exp|{<p0>0}}"]; 
+    node16 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node17 [label = "{TK_ID|printf}"]; 
+    node18 [label = "{argument_expression_list|{<p0>0|<p1>1|<p2>2}}"]; 
+    node19 [label = "{exp|{<p0>0}}"]; 
+    node20 [label = "{TK_STRING|\"hello, world, %d, %d\\n\"}"]; 
+    node21 [label = "{exp|{<p0>0}}"]; 
+    node22 [label = "{TK_INT|10}"]; 
+    node23 [label = "{exp|{<p0>0}}"]; 
+    node24 [label = "{TK_INT|20}"]; 
+    // edge
+    node0:p0 -> node1 ;
+    node1:p0 -> node2 ;
+    node2:p0 -> node3 ;
+    node1:p1 -> node4 ;
+    node4:p0 -> node5 ;
+    node4:p1 -> node6 ;
+    node0:p1 -> node7 ;
+    node7:p0 -> node8 ;
+    node8:p0 -> node9 ;
+    node7:p1 -> node10 ;
+    node10:p0 -> node11 ;
+    node10:p1 -> node12 ;
+    node7:p2 -> node13 ;
+    node13:p0 -> node14 ;
+    node14:p0 -> node15 ;
+    node15:p0 -> node16 ;
+    node16:p0 -> node17 ;
+    node16:p1 -> node18 ;
+    node18:p0 -> node19 ;
+    node19:p0 -> node20 ;
+    node18:p1 -> node21 ;
+    node21:p0 -> node22 ;
+    node18:p2 -> node23 ;
+    node23:p0 -> node24 ;
+}                                

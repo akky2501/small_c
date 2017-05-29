@@ -1,0 +1,39 @@
+digraph AST_graph {              
+    graph [                      
+        charset = "UTF-8",     
+        bgcolor = "#EDEDED",   
+        rankdir = TB,            
+        nodesep = 1.1,           
+        ranksep = 1.05,          
+    ];                           
+    node [                       
+        shape = record,          
+        // fontname = "Ricty", 
+        fontsize = 8,            
+    ];                           
+    // node
+    node0 [label = "{translation_unit|{<p0>0}}"]; 
+    node1 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node2 [label = "{type_specifier|{<p0>0}}"]; 
+    node3 [label = "{TK_KW_INT|int}"]; 
+    node4 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node5 [label = "{TK_ID|main}"]; 
+    node6 [label = "direct_declarator_parameter"]; 
+    node7 [label = "{compound_statement|{<p0>0|<p1>1}}"]; 
+    node8 [label = "{statement_label|{<p0>0}}"]; 
+    node9 [label = "{TK_ID|foo}"]; 
+    node10 [label = "{statement_goto|{<p0>0}}"]; 
+    node11 [label = "{TK_ID|foo}"]; 
+    // edge
+    node0:p0 -> node1 ;
+    node1:p0 -> node2 ;
+    node2:p0 -> node3 ;
+    node1:p1 -> node4 ;
+    node4:p0 -> node5 ;
+    node4:p1 -> node6 ;
+    node1:p2 -> node7 ;
+    node7:p0 -> node8 ;
+    node8:p0 -> node9 ;
+    node7:p1 -> node10 ;
+    node10:p0 -> node11 ;
+}                                

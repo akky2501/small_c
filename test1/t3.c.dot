@@ -1,0 +1,147 @@
+digraph AST_graph {              
+    graph [                      
+        charset = "UTF-8",     
+        bgcolor = "#EDEDED",   
+        rankdir = TB,            
+        nodesep = 1.1,           
+        ranksep = 1.05,          
+    ];                           
+    node [                       
+        shape = record,          
+        // fontname = "Ricty", 
+        fontsize = 8,            
+    ];                           
+    // node
+    node0 [label = "{translation_unit|{<p0>0|<p1>1|<p2>2}}"]; 
+    node1 [label = "{translation_unit_element|{<p0>0|<p1>1}}"]; 
+    node2 [label = "{type_specifier|{<p0>0}}"]; 
+    node3 [label = "{TK_KW_INT|int}"]; 
+    node4 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node5 [label = "{TK_ID|printf}"]; 
+    node6 [label = "direct_declarator_parameter"]; 
+    node7 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node8 [label = "{type_specifier|{<p0>0}}"]; 
+    node9 [label = "{TK_KW_INT|int}"]; 
+    node10 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node11 [label = "{TK_ID|fact}"]; 
+    node12 [label = "{direct_declarator_parameter|{<p0>0}}"]; 
+    node13 [label = "{parameter_declaration|{<p0>0|<p1>1}}"]; 
+    node14 [label = "{type_specifier|{<p0>0}}"]; 
+    node15 [label = "{TK_KW_INT|int}"]; 
+    node16 [label = "{direct_declarator|{<p0>0}}"]; 
+    node17 [label = "{TK_ID|n}"]; 
+    node18 [label = "{compound_statement|{<p0>0}}"]; 
+    node19 [label = "{statement_if|{<p0>0|<p1>1|<p2>2}}"]; 
+    node20 [label = "{exp|{<p0>0}}"]; 
+    node21 [label = "{exp8|{<p0>0|<p1>1}}"]; 
+    node22 [label = "{exp5|{<p0>0|<p1>1}}"]; 
+    node23 [label = "{TK_ID|n}"]; 
+    node24 [label = "{TK_INT|0}"]; 
+    node25 [label = "{exp6|{<p0>0|<p1>1}}"]; 
+    node26 [label = "{TK_ID|n}"]; 
+    node27 [label = "{TK_INT|0}"]; 
+    node28 [label = "{statement_return|{<p0>0}}"]; 
+    node29 [label = "{exp|{<p0>0}}"]; 
+    node30 [label = "{TK_INT|1}"]; 
+    node31 [label = "{statement_return|{<p0>0}}"]; 
+    node32 [label = "{exp|{<p0>0}}"]; 
+    node33 [label = "{exp3|{<p0>0|<p1>1|<p2>2}}"]; 
+    node34 [label = "{TK_ID|n}"]; 
+    node35 [label = "{*|*}"]; 
+    node36 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node37 [label = "{TK_ID|fact}"]; 
+    node38 [label = "{argument_expression_list|{<p0>0}}"]; 
+    node39 [label = "{exp|{<p0>0}}"]; 
+    node40 [label = "{exp4|{<p0>0|<p1>1|<p2>2}}"]; 
+    node41 [label = "{TK_ID|n}"]; 
+    node42 [label = "{-|-}"]; 
+    node43 [label = "{TK_INT|1}"]; 
+    node44 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node45 [label = "{type_specifier|{<p0>0}}"]; 
+    node46 [label = "{TK_KW_INT|int}"]; 
+    node47 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node48 [label = "{TK_ID|main}"]; 
+    node49 [label = "direct_declarator_parameter"]; 
+    node50 [label = "{compound_statement|{<p0>0}}"]; 
+    node51 [label = "{statement_exp|{<p0>0}}"]; 
+    node52 [label = "{exp|{<p0>0}}"]; 
+    node53 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node54 [label = "{TK_ID|printf}"]; 
+    node55 [label = "{argument_expression_list|{<p0>0|<p1>1|<p2>2}}"]; 
+    node56 [label = "{exp|{<p0>0}}"]; 
+    node57 [label = "{TK_STRING|\"fact (%d) = %d\\n\"}"]; 
+    node58 [label = "{exp|{<p0>0}}"]; 
+    node59 [label = "{TK_INT|10}"]; 
+    node60 [label = "{exp|{<p0>0}}"]; 
+    node61 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node62 [label = "{TK_ID|fact}"]; 
+    node63 [label = "{argument_expression_list|{<p0>0}}"]; 
+    node64 [label = "{exp|{<p0>0}}"]; 
+    node65 [label = "{TK_INT|10}"]; 
+    // edge
+    node0:p0 -> node1 ;
+    node1:p0 -> node2 ;
+    node2:p0 -> node3 ;
+    node1:p1 -> node4 ;
+    node4:p0 -> node5 ;
+    node4:p1 -> node6 ;
+    node0:p1 -> node7 ;
+    node7:p0 -> node8 ;
+    node8:p0 -> node9 ;
+    node7:p1 -> node10 ;
+    node10:p0 -> node11 ;
+    node10:p1 -> node12 ;
+    node12:p0 -> node13 ;
+    node13:p0 -> node14 ;
+    node14:p0 -> node15 ;
+    node13:p1 -> node16 ;
+    node16:p0 -> node17 ;
+    node7:p2 -> node18 ;
+    node18:p0 -> node19 ;
+    node19:p0 -> node20 ;
+    node20:p0 -> node21 ;
+    node21:p0 -> node22 ;
+    node22:p0 -> node23 ;
+    node22:p1 -> node24 ;
+    node21:p1 -> node25 ;
+    node25:p0 -> node26 ;
+    node25:p1 -> node27 ;
+    node19:p1 -> node28 ;
+    node28:p0 -> node29 ;
+    node29:p0 -> node30 ;
+    node19:p2 -> node31 ;
+    node31:p0 -> node32 ;
+    node32:p0 -> node33 ;
+    node33:p0 -> node34 ;
+    node33:p1 -> node35 ;
+    node33:p2 -> node36 ;
+    node36:p0 -> node37 ;
+    node36:p1 -> node38 ;
+    node38:p0 -> node39 ;
+    node39:p0 -> node40 ;
+    node40:p0 -> node41 ;
+    node40:p1 -> node42 ;
+    node40:p2 -> node43 ;
+    node0:p2 -> node44 ;
+    node44:p0 -> node45 ;
+    node45:p0 -> node46 ;
+    node44:p1 -> node47 ;
+    node47:p0 -> node48 ;
+    node47:p1 -> node49 ;
+    node44:p2 -> node50 ;
+    node50:p0 -> node51 ;
+    node51:p0 -> node52 ;
+    node52:p0 -> node53 ;
+    node53:p0 -> node54 ;
+    node53:p1 -> node55 ;
+    node55:p0 -> node56 ;
+    node56:p0 -> node57 ;
+    node55:p1 -> node58 ;
+    node58:p0 -> node59 ;
+    node55:p2 -> node60 ;
+    node60:p0 -> node61 ;
+    node61:p0 -> node62 ;
+    node61:p1 -> node63 ;
+    node63:p0 -> node64 ;
+    node64:p0 -> node65 ;
+}                                

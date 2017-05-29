@@ -1,0 +1,55 @@
+digraph AST_graph {              
+    graph [                      
+        charset = "UTF-8",     
+        bgcolor = "#EDEDED",   
+        rankdir = TB,            
+        nodesep = 1.1,           
+        ranksep = 1.05,          
+    ];                           
+    node [                       
+        shape = record,          
+        // fontname = "Ricty", 
+        fontsize = 8,            
+    ];                           
+    // node
+    node0 [label = "{translation_unit|{<p0>0}}"]; 
+    node1 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node2 [label = "{type_specifier|{<p0>0}}"]; 
+    node3 [label = "{TK_KW_INT|int}"]; 
+    node4 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node5 [label = "{TK_ID|main}"]; 
+    node6 [label = "direct_declarator_parameter"]; 
+    node7 [label = "{compound_statement|{<p0>0}}"]; 
+    node8 [label = "{statement_if|{<p0>0|<p1>1}}"]; 
+    node9 [label = "{exp|{<p0>0}}"]; 
+    node10 [label = "{TK_INT|1}"]; 
+    node11 [label = "{statement_if|{<p0>0|<p1>1|<p2>2}}"]; 
+    node12 [label = "{exp|{<p0>0}}"]; 
+    node13 [label = "{TK_INT|2}"]; 
+    node14 [label = "{statement_return|{<p0>0}}"]; 
+    node15 [label = "{exp|{<p0>0}}"]; 
+    node16 [label = "{TK_INT|0}"]; 
+    node17 [label = "{statement_return|{<p0>0}}"]; 
+    node18 [label = "{exp|{<p0>0}}"]; 
+    node19 [label = "{TK_INT|1}"]; 
+    // edge
+    node0:p0 -> node1 ;
+    node1:p0 -> node2 ;
+    node2:p0 -> node3 ;
+    node1:p1 -> node4 ;
+    node4:p0 -> node5 ;
+    node4:p1 -> node6 ;
+    node1:p2 -> node7 ;
+    node7:p0 -> node8 ;
+    node8:p0 -> node9 ;
+    node9:p0 -> node10 ;
+    node8:p1 -> node11 ;
+    node11:p0 -> node12 ;
+    node12:p0 -> node13 ;
+    node11:p1 -> node14 ;
+    node14:p0 -> node15 ;
+    node15:p0 -> node16 ;
+    node11:p2 -> node17 ;
+    node17:p0 -> node18 ;
+    node18:p0 -> node19 ;
+}                                

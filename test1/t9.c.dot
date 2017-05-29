@@ -1,0 +1,145 @@
+digraph AST_graph {              
+    graph [                      
+        charset = "UTF-8",     
+        bgcolor = "#EDEDED",   
+        rankdir = TB,            
+        nodesep = 1.1,           
+        ranksep = 1.05,          
+    ];                           
+    node [                       
+        shape = record,          
+        // fontname = "Ricty", 
+        fontsize = 8,            
+    ];                           
+    // node
+    node0 [label = "{translation_unit|{<p0>0}}"]; 
+    node1 [label = "{translation_unit_element|{<p0>0|<p1>1|<p2>2}}"]; 
+    node2 [label = "{type_specifier|{<p0>0}}"]; 
+    node3 [label = "{TK_KW_INT|int}"]; 
+    node4 [label = "{direct_declarator|{<p0>0|<p1>1}}"]; 
+    node5 [label = "{TK_ID|main}"]; 
+    node6 [label = "direct_declarator_parameter"]; 
+    node7 [label = "{compound_statement|{<p0>0|<p1>1|<p2>2|<p3>3|<p4>4}}"]; 
+    node8 [label = "{statement_if|{<p0>0|<p1>1|<p2>2}}"]; 
+    node9 [label = "{exp|{<p0>0}}"]; 
+    node10 [label = "{TK_ID|abc}"]; 
+    node11 [label = "{compound_statement|{<p0>0}}"]; 
+    node12 [label = "{statement_exp|{<p0>0}}"]; 
+    node13 [label = "{exp|{<p0>0}}"]; 
+    node14 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node15 [label = "{TK_ID|if_internal}"]; 
+    node16 [label = "{argument_expression_list|{<p0>0}}"]; 
+    node17 [label = "{exp|{<p0>0}}"]; 
+    node18 [label = "{exp_empty| }"]; 
+    node19 [label = "{compound_statement|{<p0>0}}"]; 
+    node20 [label = "{statement_exp|{<p0>0}}"]; 
+    node21 [label = "{exp|{<p0>0}}"]; 
+    node22 [label = "{exp1|{<p0>0|<p1>1}}"]; 
+    node23 [label = "{TK_ID|if_else_internal}"]; 
+    node24 [label = "{argument_expression_list|{<p0>0}}"]; 
+    node25 [label = "{exp|{<p0>0}}"]; 
+    node26 [label = "{exp_empty| }"]; 
+    node27 [label = "{statement_exp|{<p0>0}}"]; 
+    node28 [label = "{exp|{<p0>0}}"]; 
+    node29 [label = "{exp3|{<p0>0|<p1>1|<p2>2}}"]; 
+    node30 [label = "{primary|{<p0>0}}"]; 
+    node31 [label = "{exp|{<p0>0}}"]; 
+    node32 [label = "{exp4|{<p0>0|<p1>1|<p2>2}}"]; 
+    node33 [label = "{exp3|{<p0>0|<p1>1|<p2>2}}"]; 
+    node34 [label = "{TK_INT|7}"]; 
+    node35 [label = "{*|*}"]; 
+    node36 [label = "{TK_INT|3}"]; 
+    node37 [label = "{-|-}"]; 
+    node38 [label = "{TK_INT|5}"]; 
+    node39 [label = "{/|/}"]; 
+    node40 [label = "{primary|{<p0>0}}"]; 
+    node41 [label = "{exp|{<p0>0}}"]; 
+    node42 [label = "{exp4|{<p0>0|<p1>1|<p2>2}}"]; 
+    node43 [label = "{TK_INT|18}"]; 
+    node44 [label = "{-|-}"]; 
+    node45 [label = "{exp3|{<p0>0|<p1>1|<p2>2}}"]; 
+    node46 [label = "{TK_INT|5}"]; 
+    node47 [label = "{*|*}"]; 
+    node48 [label = "{TK_INT|2}"]; 
+    node49 [label = "{statement_while|{<p0>0|<p1>1}}"]; 
+    node50 [label = "{exp|{<p0>0}}"]; 
+    node51 [label = "{TK_ID|abc}"]; 
+    node52 [label = "{compound_statement|{<p0>0}}"]; 
+    node53 [label = "{statement_exp|{<p0>0}}"]; 
+    node54 [label = "{exp|{<p0>0}}"]; 
+    node55 [label = "{TK_ID|internal_while}"]; 
+    node56 [label = "{statement_while|{<p0>0|<p1>1}}"]; 
+    node57 [label = "{exp|{<p0>0}}"]; 
+    node58 [label = "{TK_ID|def}"]; 
+    node59 [label = "{statement_exp|{<p0>0}}"]; 
+    node60 [label = "{exp|{<p0>0}}"]; 
+    node61 [label = "{TK_ID|internal_while}"]; 
+    node62 [label = "{statement_return|{<p0>0}}"]; 
+    node63 [label = "{exp|{<p0>0}}"]; 
+    node64 [label = "{TK_INT|0}"]; 
+    // edge
+    node0:p0 -> node1 ;
+    node1:p0 -> node2 ;
+    node2:p0 -> node3 ;
+    node1:p1 -> node4 ;
+    node4:p0 -> node5 ;
+    node4:p1 -> node6 ;
+    node1:p2 -> node7 ;
+    node7:p0 -> node8 ;
+    node8:p0 -> node9 ;
+    node9:p0 -> node10 ;
+    node8:p1 -> node11 ;
+    node11:p0 -> node12 ;
+    node12:p0 -> node13 ;
+    node13:p0 -> node14 ;
+    node14:p0 -> node15 ;
+    node14:p1 -> node16 ;
+    node16:p0 -> node17 ;
+    node17:p0 -> node18 ;
+    node8:p2 -> node19 ;
+    node19:p0 -> node20 ;
+    node20:p0 -> node21 ;
+    node21:p0 -> node22 ;
+    node22:p0 -> node23 ;
+    node22:p1 -> node24 ;
+    node24:p0 -> node25 ;
+    node25:p0 -> node26 ;
+    node7:p1 -> node27 ;
+    node27:p0 -> node28 ;
+    node28:p0 -> node29 ;
+    node29:p0 -> node30 ;
+    node30:p0 -> node31 ;
+    node31:p0 -> node32 ;
+    node32:p0 -> node33 ;
+    node33:p0 -> node34 ;
+    node33:p1 -> node35 ;
+    node33:p2 -> node36 ;
+    node32:p1 -> node37 ;
+    node32:p2 -> node38 ;
+    node29:p1 -> node39 ;
+    node29:p2 -> node40 ;
+    node40:p0 -> node41 ;
+    node41:p0 -> node42 ;
+    node42:p0 -> node43 ;
+    node42:p1 -> node44 ;
+    node42:p2 -> node45 ;
+    node45:p0 -> node46 ;
+    node45:p1 -> node47 ;
+    node45:p2 -> node48 ;
+    node7:p2 -> node49 ;
+    node49:p0 -> node50 ;
+    node50:p0 -> node51 ;
+    node49:p1 -> node52 ;
+    node52:p0 -> node53 ;
+    node53:p0 -> node54 ;
+    node54:p0 -> node55 ;
+    node7:p3 -> node56 ;
+    node56:p0 -> node57 ;
+    node57:p0 -> node58 ;
+    node56:p1 -> node59 ;
+    node59:p0 -> node60 ;
+    node60:p0 -> node61 ;
+    node7:p4 -> node62 ;
+    node62:p0 -> node63 ;
+    node63:p0 -> node64 ;
+}                                

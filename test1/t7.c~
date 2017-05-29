@@ -1,0 +1,8 @@
+
+int main(){
+	if(abc) ;
+	else ;
+label: ;
+	   goto label;
+	return;
+}
